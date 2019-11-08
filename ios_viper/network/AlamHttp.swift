@@ -11,8 +11,8 @@ import Alamofire
 
 private let IS_TESTER = true
 
-private let DEPLOYMENT_SERVER = "http://172.30.1.17:8080/"
-private let DEVELOPMENT_SERVER = "http://172.30.1.17:8080/"
+private let DEPLOYMENT_SERVER = "http://locahost:8080/"
+private let DEVELOPMENT_SERVER = "http://locahost:8080/"
 private let CONTENT_TYPE = "application/json"
 
 class AlamHttp {
