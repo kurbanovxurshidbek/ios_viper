@@ -12,10 +12,10 @@ import CoreData
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        setCommonNavBar()
         return true
     }
 
@@ -76,6 +76,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
             }
         }
+    }
+    
+    func setCommonNavBar(){
+        UINavigationBar.appearance().barTintColor = Utils.uicolorFromHex(rgbValue: 0xeef2f6)
+        UINavigationBar.appearance().backgroundColor = Utils.uicolorFromHex(rgbValue: 0xeef2f6)
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
+        UINavigationBar.appearance().isTranslucent = false
+        UINavigationBar.appearance().shadowImage = UIImage()
+        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
     }
 
 }
